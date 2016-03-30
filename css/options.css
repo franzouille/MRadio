@@ -1,0 +1,378 @@
+body
+{
+    background-color: #F0F0F0;
+    color: black;
+    font: 13px Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+}
+
+h1
+{
+    color: #202020;
+    font-size: 24px;
+    margin: 0px -15px 10px -15px;
+    text-transform: uppercase;
+}
+
+.emphasis, h2
+{
+   color: #202020;
+   font-size: 14px;
+   font-weight: bold;
+   text-shadow: #EFEFEF 0px 1px 0px;
+}
+
+h2 { margin: 15px 0px 5px 0px; }
+
+a 
+{
+    color: #3c3c3c;
+    text-decoration: none; 
+}
+
+
+/* ***********************************************************************
+ *                            Navigation bar      
+ * ********************************************************************** */
+#tab_chooser
+{
+    background: #DBDBDB;
+    height: 29px;
+    line-height: 28px;
+}
+    
+nav
+{
+    margin: 0px auto 0 auto;
+    text-shadow: #EFEFEF 0px 1px 0px;
+    text-transform: uppercase;
+    width: 800px;
+}
+
+nav a
+{
+    border-right: 1px solid #D0D0D0;
+    color: #919191;
+    display: inline-block;
+    height: 29px;
+    text-align: center;
+    font-weight: bold;
+    width: 159px;
+    -webkit-transition: all 0.3s;
+}
+
+nav a:last-child { border-right: 0; }
+nav a:hover { color: #666; }
+
+nav a.currentone, nav a.currentone:hover
+{
+    background-color: #444;
+    color: white;
+    text-shadow: 0 -1px black;
+}
+
+#arrow_line
+{
+    display: block;
+    margin: 0px auto 0 auto;
+    width: 800px;
+}
+    
+#arrow_line span
+{
+    background: url(/imgs/options.png);
+    display: block;
+    left: 73px;
+    height: 7px;
+    position: relative;
+    width: 13px;
+    -webkit-transition: all 0.3s;
+}
+
+
+/* ***********************************************************************
+ *                            New items      
+ * ********************************************************************** */
+
+a.new_item
+{
+    background: url(/imgs/new.png) no-repeat 5px 9px;
+    padding-left: 10px; /* we want a left padding of 5px; double it to account for centerness */
+    width: 149px; /* normal size (159px) minus left padding */
+}
+
+h2.new_item
+{
+   background: url(/imgs/new.png) no-repeat 5px 5px;
+   padding-left: 35px;
+}
+
+span.new_item
+{
+   background: url(/imgs/new.png) no-repeat 0px 3px;
+   padding-left: 30px;
+}
+
+
+/* ***********************************************************************
+ *                            Center block      
+ * ********************************************************************** */
+
+#center_block
+{
+    background-color: white;
+    border: 1px solid #E9E9E9;
+    height: 525px;
+    width: 760px;
+    margin: 20px auto 0 auto;
+    padding: 20px;
+}
+
+section
+{
+    display: none;
+    line-height: 1.5;
+    margin: 0px 15px;
+    text-align: justify;
+}
+
+fieldset
+{
+    border: 0;
+    padding: 0;
+    margin: 10px 0px 0px 0px;
+}
+
+fieldset div
+{
+    height: 30px;
+    line-height: 30px;
+}
+
+fieldset * { vertical-align: middle; }
+    
+footer
+{
+    background: #DBDBDB;
+    border-top: 1px solid #C4C4C5;
+    color: #666;
+    font-weight: normal;
+    margin: 20px auto 0 auto;
+    padding: 10px 15px 15px 15px;
+    text-align: center;
+    text-shadow: 0 1px white;
+    width: 770px;
+}
+    
+footer a:hover, .mail_me:hover { text-decoration: underline; }
+
+
+/* ***********************************************************************
+ *                            Welcome page      
+ * ********************************************************************** */
+
+#remember_to
+{
+    border: 1px dashed #BEBEBE;
+    margin: 25px 0px;
+    padding: 10px;
+}
+
+#remember_to h2  { margin: 0px 0px 10px 0px;  }
+#remember_to div { margin: 0px 0px 15px 10px; }
+
+#remember_to_buttons {
+    display: block;
+    float: left;
+}
+
+#remember_to a  
+{
+	display: block; 
+	line-height: 16px;
+	position: relative;
+	top: -5px;
+    margin: 0px 8px 6px 0px;
+}
+
+
+/* ***********************************************************************
+ *                            Popup page      
+ * ********************************************************************** */
+ 
+#fake_omnibar
+{
+    border: 1px solid #ada9a5;
+    border-radius: 3px;
+    color: #3c3c3c;
+    display: inline-block;
+    line-height: 25px;
+    font-size: 15px;
+    margin-top: 10px;
+    width: 685px;
+}
+
+#world_icon, #star_icon
+{
+    background: no-repeat;
+    display: inline-block;
+    height: 19px;
+    width: 19px;
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+    vertical-align: middle;
+}
+#world_icon { background: url(/imgs/options.png) 0px -16px; margin-left: 5px; }
+#star_icon { background: url(/imgs/options.png) 0px -35px; }
+
+#extension_icon
+{
+    display: inline-block;
+    float: right;
+    background: url(/imgs/icons/deezer_19x19.png) no-repeat 4px 4px;
+    margin-right: 13px;
+    margin-top: 10px;
+    height: 25px;
+    width: 25px;
+}
+
+#preview 
+{ 
+    text-align: right;
+    margin-top: 5px;
+    height: 300px;
+}
+
+#arrow_preview 
+{
+    background: url(/imgs/options.png) 0px -7px;
+    display: block;
+    float: right;
+    height: 9px;
+    position: relative;
+    right: 17px;
+    bottom: 8px;
+    width: 17px;
+    z-index: 500;
+}
+
+#preview_outer_border
+{
+    border: solid 1px #636363;
+    border-radius: 4px; 
+    display: inline-block;
+    font-size: 0px;
+    position: relative;
+    left: 17px;
+    z-index: 400;
+}
+
+#preview_inner_border
+{
+    background-color: black;
+    border: solid 1px white; 
+   border-radius: 2px;
+}
+
+
+/* ***********************************************************************
+ *                            Notifications / hotkeys     
+ * ********************************************************************** */
+
+#notifications input[type="radio"]
+{
+    height: 25px;
+    margin-right: 1px; 
+}
+
+#notifications input[type="radio"] + label
+{
+    position: relative;
+    top: 3px;
+}
+
+.warning
+{
+    margin-left: 20px;
+    color: red;
+    font-style: italic;
+    font-weight: bold;    
+    visibility: hidden;
+}
+
+#hotkey_permission_ko, #hotkey_permission_ok { display: none; }
+#hotkey_permission_ko > * { margin-top: 10px; }
+
+
+
+/* ***********************************************************************
+ *                    		Inputs     
+ * ********************************************************************** */
+
+.btn_unselected, .btn_selected, .btn_blue, .btn_red, select
+{
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+}
+
+.btn_unselected, .btn_selected { background: #F0F0F0; text-shadow: 0 1px white; }
+.btn_unselected:hover, .btn_selected:hover { background: white; color: black; }
+
+.btn_unselected
+{
+    border: 1px solid #D0D0D0;
+    color: gray;
+    text-shadow: 0 1px white;
+}
+	
+.btn_selected
+{
+    background: #F0F0F0;
+    border: 1px solid black;
+    color: black;
+}
+
+.btn_blue
+{
+    background: #3B6280;
+    background: -webkit-linear-gradient(bottom, #3B6280, #63A4D6);
+    border: 1px solid #1E3140;
+    color: white;
+}
+
+.btn_blue:hover { background: #63A4D6; }
+
+.btn_red
+{
+    background: #832E2E;
+    background: -webkit-linear-gradient(bottom, #832E2E, #DB4D4D);
+    border: 1px solid #421717;
+    color: white;
+}
+
+.btn_red:hover { background: #DB4D4D; }
+
+input { border: 1px solid #D0D0D0; }
+select { background-color: #FCFCFC; color: #191919; }
+
+
+
+div.yes_no_bar
+{
+   padding: 5px; 
+   margin: 5px 0px -5px -5px; 
+}
+
+div.save_cancel_bar
+{
+    border-top: 1px solid lightgray;
+    padding: 5px; 
+    margin: 15px 0px 0px -5px; 
+}
+
+.button_cancel { display: none; }
+

@@ -1,0 +1,6 @@
+repo: a55ec5d79bc9f78aa320909d47157bee5b680fff
+node: aa47c8ec4a4dc805f863b61666680465ee87a3cd
+branch: default
+latesttag: DEEZER_CONTROL_2.6
+latesttagdistance: 1
+changessincelatesttag: 1

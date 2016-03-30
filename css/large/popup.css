@@ -1,0 +1,48 @@
+@import url('../popup.css');
+
+.popup_display 
+{
+	min-height: 278px;
+	min-width: 250px;
+	margin: 0px 4px 4px 4px;
+}
+
+#controls
+{
+	height: 28px;
+	line-height: 28px;
+}
+
+#controls a 
+{ 
+	height: 16px;
+	margin-right: 6px;
+	background-image: url(/imgs/large.png);
+}
+
+#controls a:hover { opacity: 1; }
+#control-settings { width: 16px; margin-left: 6px; }
+#control-prev	  { background-position: -16px; width: 24px; }
+#control-pause	  { background-position: -40px; width: 16px; }
+#control-play	  { background-position: -56px; width: 16px; }
+#control-next	  { background-position: -72px; width: 24px; }
+#control-like	  { 							width: 16px; margin-left: 16px;}
+.not_liked { background-position: -96px; }
+.is_liked { background-position: -112px; }
+
+#now_playing { height: 250px; }
+#now_playing_info
+{
+	padding: 0px 9px 0px 9px;
+	height: 43px;
+	font-size: 16px;
+	line-height: 17px;
+	width: 232px;
+}
+
+#now_playing_info_track { margin-bottom: 2px; }
+#cover 
+{
+	height: 250px;
+	width: 250px;
+}

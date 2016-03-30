@@ -1,0 +1,53 @@
+@import url('../popup.css');
+
+.popup_display
+{
+	min-height: 80px;
+	min-width: 290px;
+	margin: 3px;
+}
+
+#controls
+{
+	float: left;
+	margin-left: 95px;
+	height: 20px;
+	width: 190px;
+	line-height: 20px;
+}
+
+#controls a 
+{ 
+	height: 10px;
+	margin-right: 5px;
+	background-image: url(/imgs/small.png);
+}
+
+#controls a:hover { opacity: 1; }
+#control-settings { width: 10px; margin-left: 5px; }
+#control-prev	  { background-position: -10px; width: 15px; }
+#control-pause	  { background-position: -25px; width: 10px; }
+#control-play	  { background-position: -35px; width: 10px; }
+#control-next	  { background-position: -45px; width: 15px; }
+#control-like	  { 							width: 10px; margin-left: 10px;}
+.not_liked { background-position: -60px; }
+.is_liked { background-position: -70px; }
+
+#now_playing { height: 80px; }
+#now_playing_info
+{
+	margin-left: 95px;
+	height: 50px;
+	width: 190px;
+	font-size: 16px;
+	line-height: 17px;
+}
+
+#now_playing_info_track { margin-bottom: 2px; }
+#cover 
+{
+	height: 80px;
+	width: 80px;
+}
+
+#shadow_top, #shadow_bottom { display: none; }

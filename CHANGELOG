@@ -1,0 +1,124 @@
+2.6 - 06/11/2015
+ * Improvement: love icon is now correctly updated in real time
+
+2.5 - 21 Jan 2015
+ * Fix: updated extension to match latest Deezer API
+ 
+2.4 - 18 Oct 2014 
+ * Fix: new Deezer is now properly supported
+ * Improvement: liking a song is now possible
+ * Improvement: added support of radiofg.com
+ 
+2.3 - 04 Oct 2014 
+ * Improvement: added Italian and Portuguese (Brazil) translations (thanks to Alexandre Vicenzi)
+ * Improvement: added support of new Deezer 
+ * Improvement: added support of SoundCloud.com
+
+2.2 - 30 Jul 2014
+ * Fix: https://bitbucket.org/metoule/deezer_control/issue/3/deezer-control-causing-issues-with-chrome
+ * Fix: no longer try to execute content script on chrome:// URLs
+ * Improvement: multiple deezer tabs can be opened at the same time
+ * Improvement: no longer rely on URLs to detect if another player is playing
+ * Improvement: reloading the extension no longer makes the extension fail
+
+2.1 - 09 Jun 2014
+ * Follow Deezer JS change
+
+2.0 - 02 Jun 2014
+ * New, flatter, icons
+ * Fix: prevent hotkeys from being seen twice
+ * Fix: orange.deezer.com users can now use the extension as expected
+ * Improvement: hotkeys can be used even if the page isn't fully loaded
+ * Improvement: hotkeys can now be disabled
+ * Improvement: use less memory
+ * Style: keep in sync with Deezer style
+ * Style: buttons are now more consistent across the extension
+ * Cleanup: old notification system completely removed
+ 
+1.8 - 
+ * Extension keeps working after update (no longer requires a page refresh)
+ * Limit the number of useless notification refresh 
+ * Listener on player changes is now in its own file
+ * Re-added notifications display options  
+
+1.7 - 24 Sep 2013 
+ * Improved first time install:
+ * Deezer tab no longer needs to be refreshed for the popup to display content 
+ * When hotkeys are activated for the first time, hotkeys.js is injected on all opened pages 
+ 
+1.6 - 13 Sep 2013
+ * New notifications system to support latest Chrome versions
+ * Use latest Chrome API
+ * Player listener rewritten to fire less events 
+ 
+1.5 - 08 Aug 2013
+ * Update listener script to match Deezer update
+
+1.3/1.4 - 30 May 2013
+ * Correctly extend the show function to avoid breaking the jQuery chaining
+
+1.2 - 
+ * Song and artist names are now links to their respective pages
+ * It's now possible to skin the notifications
+ * Don't preload notifications covers if not needed
+ * Correctly monitor play / pause changes
+
+1.1 - 27 Jan 2013
+ * Fixed https://bitbucket.org/metoule/deezer_control/issue/1/package-incorrect
+
+1.0 - 19 Nov 2012
+ * Replaced badge text from NEW to version to work around bug https://code.google.com/p/chromium/issues/detail?id=154270 
+ * Rewrote options' page explanation text
+ * Improved Deezer tab mechanism to allow reuse
+ * Bug fixes for notif always on: close notif if no Deezer tab opened / re-open notif if closed
+ * Added jump to Deezer feature
+
+0.1.5 - 05 Oct 2012
+ * Fixed typo in french locale
+
+0.1.4 - 28 Sep 2012 
+ * Updated style to latest Deezer one
+ * Improved the way deezer tabs are counted to avoid the empty popup symptom
+
+0.1.3 - 21 Jul 2012
+ * Bubble mouse event on notif mouse over to correctly show cursor on buttons
+
+0.1.2 - 19 Jul 2012 
+ * Stop notification timer on mouse over
+
+0.1.1 - 19 Jul 2012
+ * Added hot keys support
+ * Improved local storage for easier default values
+ * Improved notification system to be displayable on hot keys only 
+ * Options.html migrated to jQuery
+ * Pre cache album covers for faster display
+ * Fixed flickering on popup load if change of CSS needed
+
+0.0.8 - 03 Mar 2012 
+ * Added script to ease delivery
+
+0.0.7 - 03 Mar 2012
+ * Use data-i18n-content in HTML tags to be HTML5 compliant
+ * Improved popup display time by using a workaround for bug http://crbug.com/24467
+ * Changed default image to an empty CD
+ * Change event to listen to in player_listener, from unload to beforeunload, so that we're guaranteed to be called
+
+0.0.6 - 19 Feb 2012
+ * Improved notifications mechanism
+
+0.0.5 - 18 Feb 2012
+ * Solve issue with erroneous opened tabs count on page refresh
+ * Hide next / prev buttons if inactive on Deezer 
+
+0.0.4 - 16 Feb 2012 
+ * Added text to welcome page
+ * Added notifications
+ * Update cover size on popup style change
+ * If no deezer tab is opened, a click on browser action opens one
+
+0.0.3 - 07 Feb 2012
+ * Set large popup style as default for new installs
+
+0.0.2 - 05 Feb 2012
+
+ * Initial revision 
