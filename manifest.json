@@ -18,7 +18,8 @@
   						"scripts/jquery-2.1.0.min.js", 
   						"scripts/localstorage.js", 
   						"scripts/notifications.js", 
-  						"scripts/background.js" 
+  						"scripts/background.js",
+						"scripts/token.js"
 					], 
   					"persistent": false 
 				},
@@ -29,13 +30,15 @@
 								"js": [ "scripts/player_listener.js", "scripts/deezer/bootstrap.js" ]
 							}
 						],
-  "permissions":	[ 
+  "permissions":	[
 						"*://*.deezer.com/*",
-						"notifications", 
+						"*://mirakl.hipchat.com/*",
+						"notifications",
 						"tabs",
-		  				"webNavigation"
+		  				"webNavigation",
+	  					"tts"
 					],
-  "content_security_policy": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' http://cdn-images.deezer.com/images/cover/ https://*.sndcdn.com/ http://*.radiofg.com/ http://*.last.fm/;",
+  "content_security_policy": "default-src 'self' ; connect-src 'self' https://mirakl.hipchat.com/ ; style-src 'self' 'unsafe-inline'; img-src 'self' http://cdn-images.deezer.com/images/cover/ https://*.sndcdn.com/ http://*.radiofg.com/ http://*.last.fm/;",
   "optional_permissions": [ "<all_urls>" ],
   "web_accessible_resources": [
   						"scripts/deezer/player_observer.js",

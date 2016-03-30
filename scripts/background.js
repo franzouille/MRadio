@@ -160,6 +160,19 @@ chrome.tabs.onActivated.addListener(function (iActiveTabInfo)
 });
 
 
+function sendToHipChat(artist, title){
+	$.ajax({
+		type: "POST",
+		url: "https://mirakl.hipchat.com/v2/room/2589462/notification?auth_token=" + token,
+		data: {
+			color: "green",
+			message: title + " - " + artist,
+			"notify":false,
+			"message_format":"text"},
+		dataType: 'json'
+	});
+}
+
 // set up the popup: if at least one deezer tab is opened, we'll show the popup
 // otherwise, open a new deezer tab
 function setUpPopup()
@@ -233,6 +246,10 @@ function extensionOnMessageListener(request, sender, sendResponse)
 		
 		// update player info
 		LOCSTO.session.playersData[playerTabId] = request.nowPlayingData;
+
+		sendToHipChat(request.nowPlayingData.dz_artist, request.nowPlayingData.dz_track);
+		chrome.tts.speak("Mirakl radio");
+
 		
 		// change of player?
 		if (playerTabId !== LOCSTO.session.playersTabs[0])
