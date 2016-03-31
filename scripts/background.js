@@ -173,6 +173,14 @@ function sendToHipChat(artist, title){
 	});
 }
 
+function getJingle(){
+	return messages[Math.floor(Math.random()*messages.length)];
+}
+
+function speakJingle(){
+	chrome.tts.speak(getJingle());
+}
+
 // set up the popup: if at least one deezer tab is opened, we'll show the popup
 // otherwise, open a new deezer tab
 function setUpPopup()
@@ -248,8 +256,7 @@ function extensionOnMessageListener(request, sender, sendResponse)
 		LOCSTO.session.playersData[playerTabId] = request.nowPlayingData;
 
 		sendToHipChat(request.nowPlayingData.dz_artist, request.nowPlayingData.dz_track);
-		chrome.tts.speak("Mirakl radio");
-
+		speakJingle();
 		
 		// change of player?
 		if (playerTabId !== LOCSTO.session.playersTabs[0])

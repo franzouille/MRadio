@@ -19,8 +19,9 @@
   						"scripts/localstorage.js", 
   						"scripts/notifications.js", 
   						"scripts/background.js",
-						"scripts/token.js"
-					], 
+						"token.js",
+						"scripts/messages.js"
+					],
   					"persistent": false 
 				},
   "options_page": "options.html",
