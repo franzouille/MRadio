@@ -178,7 +178,7 @@ function getJingle(){
 }
 
 function speakJingle(){
-	chrome.tts.speak(getJingle());
+	chrome.tts.speak(getJingle(), {'lang': 'en-US'});
 }
 
 // set up the popup: if at least one deezer tab is opened, we'll show the popup
