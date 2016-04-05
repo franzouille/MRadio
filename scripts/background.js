@@ -171,14 +171,48 @@ function sendToHipChat(artist, title){
 			"message_format":"text"},
 		dataType: 'json'
 	});
+
+	chrome.tts.getVoices(
+			function(voices) {
+				for (var i = 0; i < voices.length; i++) {
+					console.log('Voice ' + i + ':');
+					console.log('  name: ' + voices[i].voiceName);
+					console.log('  lang: ' + voices[i].lang);
+					console.log('  gender: ' + voices[i].gender);
+					console.log('  extension id: ' + voices[i].extensionId);
+					console.log('  event types: ' + voices[i].eventTypes);
+				}
+			});
 }
 
 function getJingle(){
+	var messages = mergeMessages();
 	return messages[Math.floor(Math.random()*messages.length)];
 }
 
+function mergeMessages(){
+	var messages = [];
+
+	messagesEn.forEach(function(element){
+		messages.push({
+			value: element,
+			lang: "en-US"
+		})
+	})
+
+	messagesFr.forEach(function(element){
+		messages.push({
+			value: element,
+			lang: "fr-FR"
+		})
+	})
+
+	return messages;
+}
+
 function speakJingle(){
-	chrome.tts.speak(getJingle(), {'lang': 'en-US'});
+	var message = getJingle()
+	chrome.tts.speak(message.value, {'lang': message.lang});
 }
 
 // set up the popup: if at least one deezer tab is opened, we'll show the popup

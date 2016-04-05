@@ -20,7 +20,8 @@
   						"scripts/notifications.js", 
   						"scripts/background.js",
 						"token.js",
-						"scripts/messages.js"
+						"scripts/messages_en.js",
+						"scripts/messages_fr.js"
 					],
   					"persistent": false 
 				},
