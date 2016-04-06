@@ -159,6 +159,7 @@ chrome.tabs.onActivated.addListener(function (iActiveTabInfo)
 	});
 });
 
+var priorityJingle = null;
 
 function sendToHipChat(artist, title){
 	$.ajax({
@@ -176,8 +177,19 @@ function sendToHipChat(artist, title){
 }
 
 function getJingle(){
-	var messages = mergeMessages();
-	return messages[Math.floor(Math.random()*messages.length)];
+	if(priorityJingle === null) {
+		var messages = mergeMessages();
+		return messages[Math.floor(Math.random() * messages.length)];
+	} else {
+		return priorityJingle
+	}
+}
+
+function setPriorityJingle(message, lang){
+	priorityJingle = {
+		value: message,
+		lang: lang
+	};
 }
 
 function mergeMessages(){
@@ -205,6 +217,7 @@ function speakJingle(){
 	var message = getJingle();
 	chrome.tts.speak(message.value, {'lang': message.lang});
 	console.log(message.value);
+	priorityJingle = null;
 }
 
 // set up the popup: if at least one deezer tab is opened, we'll show the popup
