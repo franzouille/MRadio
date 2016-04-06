@@ -17,8 +17,9 @@
   					"scripts": [ 
   						"scripts/jquery-2.1.0.min.js", 
   						"scripts/localstorage.js", 
-  						"scripts/notifications.js", 
-  						"scripts/background.js",
+  						"scripts/notifications.js",
+						"scripts/background.js",
+						"scripts/commands.js",
 						"token.js",
 						"scripts/messages_en.js",
 						"scripts/messages_fr.js"
@@ -38,7 +39,9 @@
 						"notifications",
 						"tabs",
 		  				"webNavigation",
-	  					"tts"
+	  					"tts",
+	  					"gcm",
+	  					"storage"
 					],
   "content_security_policy": "default-src 'self' ; connect-src 'self' https://mirakl.hipchat.com/ ; style-src 'self' 'unsafe-inline'; img-src 'self' http://cdn-images.deezer.com/images/cover/ https://*.sndcdn.com/ http://*.radiofg.com/ http://*.last.fm/;",
   "optional_permissions": [ "<all_urls>" ],
