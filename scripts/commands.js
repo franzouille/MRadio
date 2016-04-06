@@ -25,4 +25,10 @@ chrome.runtime.onInstalled.addListener(function() {
 chrome.gcm.onMessage.addListener(function(message) {
     // A message is an object with a data property that
     // consists of key-value pairs.
+    console.log(message)
+    switch(message.data.command){
+        case "next":
+            chrome.runtime.sendMessage({ type: "controlPlayer", command: "next", source: "popup" });
+            break;
+    }
 });
