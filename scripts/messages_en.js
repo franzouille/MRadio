@@ -20,5 +20,8 @@ var messagesEn = [
     "We are taking care of your request. We will get back to you as soon as possible.",
 
     "Bon accueil train is leaving",
-    "Solo mid one versus one"
+    "Solo mid one versus one",
+    "The server encountered a temporary error and could not complete your request.",
+    "Please try again in 30 seconds.",
+    "we are passionate professionals"
 ];
